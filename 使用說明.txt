@@ -1,0 +1,36 @@
+米兔教室座位系統 PWA 版
+版本：v2026.04.30-58
+
+一、這包是什麼？
+這是米兔教室座位系統的 PWA 版。
+主要檔案是 index.html，另外加上 manifest.webmanifest、sw.js、icons 資料夾。
+
+二、重要提醒
+PWA 不能直接用 file:// 雙擊安裝。
+要能安裝成 App，通常需要：
+1. https 網址，例如 GitHub Pages、Netlify、Firebase Hosting
+2. 或在電腦上用 http://localhost 測試
+
+三、在電腦測試
+Windows：
+雙擊「啟動PWA本機測試_Windows.bat」
+
+Mac：
+雙擊「啟動PWA本機測試_Mac.command」
+如果被系統擋下，請右鍵打開。
+
+四、手機安裝
+iPhone / iPad Safari：
+正式放到 https 網址後，打開網頁，按分享，選「加入主畫面」。
+
+Android Chrome：
+正式放到 https 網址後，打開網頁，選單中可選「安裝應用程式」或「加入主畫面」。
+
+五、資料注意
+local HTML 與 PWA 的網址來源不同，localStorage 不會自動共用。
+如果你原本在 local HTML 有資料，請先在舊版按「匯出佈置」與「匯出名單」。
+換到 PWA 後，再用「載入佈置」與「載入名單」匯入。
+
+六、正式上線
+把整個「米兔教室座位系統_v2026.04.30-58_PWA版」資料夾上傳到 GitHub Pages / Netlify。
+上線後使用 https 網址，就能在手機加入主畫面。
