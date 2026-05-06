@@ -1,36 +1,30 @@
-米兔教室座位系統 PWA 版
-版本：v2026.04.30-59
+米兔教室座位系統 PWA 快取修正版
+版本：v2026.04.30-60
 
-一、這包是什麼？
-這是米兔教室座位系統的 PWA 版。
-主要檔案是 index.html，另外加上 manifest.webmanifest、sw.js、icons 資料夾。
+這版修正重點：
+1. 修掉舊版 service worker 一直把 index.html 從快取吐回來的問題。
+2. HTML / manifest / icons 改成 network-first，重新整理時會優先抓 GitHub Pages 上的新檔案。
+3. service worker 註冊加入 updateViaCache:none 與版本參數。
+4. 新增 clear-cache.html，可用來清除舊版 PWA 快取。
+5. 桌面圖示維持透明背景與放大版兔兔。
 
-二、重要提醒
-PWA 不能直接用 file:// 雙擊安裝。
-要能安裝成 App，通常需要：
-1. https 網址，例如 GitHub Pages、Netlify、Firebase Hosting
-2. 或在電腦上用 http://localhost 測試
+上傳 GitHub Pages 後，請第一次先打開：
+https://你的帳號.github.io/你的repo/clear-cache.html
 
-三、在電腦測試
-Windows：
-雙擊「啟動PWA本機測試_Windows.bat」
+它會自動：
+- 移除舊 service worker
+- 清除舊 cache
+- 跳到 index.html?v=60
 
-Mac：
-雙擊「啟動PWA本機測試_Mac.command」
-如果被系統擋下，請右鍵打開。
+之後正常使用網址：
+https://你的帳號.github.io/你的repo/
+或
+https://你的帳號.github.io/你的repo/index.html?v=60
 
-四、手機安裝
-iPhone / iPad Safari：
-正式放到 https 網址後，打開網頁，按分享，選「加入主畫面」。
+手機 Chrome 如果仍看到舊版：
+1. 先開 clear-cache.html
+2. 刪掉主畫面上的舊捷徑 / 舊 PWA
+3. 重新加入主畫面
 
-Android Chrome：
-正式放到 https 網址後，打開網頁，選單中可選「安裝應用程式」或「加入主畫面」。
-
-五、資料注意
-local HTML 與 PWA 的網址來源不同，localStorage 不會自動共用。
-如果你原本在 local HTML 有資料，請先在舊版按「匯出佈置」與「匯出名單」。
-換到 PWA 後，再用「載入佈置」與「載入名單」匯入。
-
-六、正式上線
-把整個「米兔教室座位系統_v2026.04.30-59_PWA版」資料夾上傳到 GitHub Pages / Netlify。
-上線後使用 https 網址，就能在手機加入主畫面。
+資料提醒：
+清除 PWA 快取通常不會清 localStorage，但正式更新前仍建議先在系統內「匯出佈置」與「匯出名單」。
