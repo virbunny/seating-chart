@@ -1,13 +1,13 @@
-const CACHE_NAME = 'mitu-seat-v2026.04.30-62';
-const APP_VERSION = 'v2026.04.30-62';
+const CACHE_NAME = 'mitu-seat-v2026.04.30-63';
+const APP_VERSION = 'v2026.04.30-63';
 const PRECACHE_ASSETS = [
   './index.html',
   './manifest.webmanifest',
   './favicon.ico',
-  './icons/icon-64-v62.png',
-  './icons/icon-192-v62.png',
-  './icons/icon-512-v62.png',
-  './icons/icon-maskable-512-v62.png'
+  './icons/icon-64-v63.png',
+  './icons/icon-192-v63.png',
+  './icons/icon-512-v63.png',
+  './icons/icon-maskable-512-v63.png'
 ];
 
 self.addEventListener('install', event => {
