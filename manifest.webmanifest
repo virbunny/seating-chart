@@ -1,7 +1,7 @@
 {
   "name": "米兔教室座位系統",
   "short_name": "米兔座位",
-  "description": "米兔教室座位系統 PWA 版",
+  "description": "米兔教室座位系統 PWA 版（透明桌面圖示放大版）",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
