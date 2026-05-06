@@ -16,7 +16,7 @@
   <div class="card">
     <h1>米兔座位系統快取更新</h1>
     <p id="status">正在清除舊版 PWA 快取……</p>
-    <a id="open" href="./index.html?v=61" style="display:none">開啟新版</a>
+    <a id="open" href="./index.html?v=62" style="display:none">開啟新版</a>
   </div>
   <script>
     async function clearEverything() {
@@ -32,11 +32,11 @@
           await Promise.all(keys.map(key => caches.delete(key)));
           lines.push('已清除舊快取：' + keys.length + ' 個');
         }
-        lines.push('完成。即將開啟 v2026.04.30-61。');
+        lines.push('完成。即將開啟 v2026.04.30-62。');
         document.getElementById('status').textContent = lines.join('
 ');
         document.getElementById('open').style.display = 'inline-block';
-        setTimeout(function () { window.location.replace('./index.html?v=61'); }, 1200);
+        setTimeout(function () { window.location.replace('./index.html?v=62'); }, 1200);
       } catch (err) {
         document.getElementById('status').textContent = '清除時發生錯誤：' + err + '
 請按下方按鈕開啟新版。';
